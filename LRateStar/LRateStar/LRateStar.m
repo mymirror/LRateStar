@@ -165,6 +165,11 @@ typedef void(^completeBlock)(CGFloat currentScore);
     
     view.backgroundColor = [UIColor clearColor];
     
+    CGFloat imageviewHeight = self.bounds.size.height;
+    if (self.bounds.size.height>image.size.height) {
+        imageviewHeight = image.size.height;
+    }
+    
     //根据传过来的星星的数量来布局有几个星星
     for (NSInteger i = 0; i < self.numberOfStars; i ++)
         
@@ -172,7 +177,7 @@ typedef void(^completeBlock)(CGFloat currentScore);
         
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         
-        imageView.frame = CGRectMake(i * self.bounds.size.width / self.numberOfStars, 0, self.bounds.size.width / self.numberOfStars, self.bounds.size.height);
+        imageView.frame = CGRectMake(i * self.bounds.size.width / self.numberOfStars, (self.bounds.size.height-imageviewHeight)/2.0, self.bounds.size.width / self.numberOfStars, imageviewHeight);
         
         //  保持图片内容的纵横比例，来适应视图的大小。
         
