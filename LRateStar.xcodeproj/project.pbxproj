@@ -15,9 +15,11 @@
 		35EA794120478CF9007266E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EA794020478CF9007266E1 /* main.m */; };
 		35EA794A20478D4A007266E1 /* LRateStar.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EA794920478D4A007266E1 /* LRateStar.m */; };
 		35EA794E204791C5007266E1 /* LRateStar.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 35EA794D204791C5007266E1 /* LRateStar.bundle */; };
+		5AA99C2B49D4C79856ADD0AF /* libPods-LRateStar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26068E3ACD88370FB6BBFBA3 /* libPods-LRateStar.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26068E3ACD88370FB6BBFBA3 /* libPods-LRateStar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LRateStar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EA792E20478CF9007266E1 /* LRateStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRateStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EA793120478CF9007266E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		35EA793220478CF9007266E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -31,6 +33,8 @@
 		35EA794820478D4A007266E1 /* LRateStar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRateStar.h; sourceTree = "<group>"; };
 		35EA794920478D4A007266E1 /* LRateStar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRateStar.m; sourceTree = "<group>"; };
 		35EA794D204791C5007266E1 /* LRateStar.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LRateStar.bundle; sourceTree = "<group>"; };
+		64D86707AAFEBCD17460399C /* Pods-LRateStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRateStar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LRateStar/Pods-LRateStar.debug.xcconfig"; sourceTree = "<group>"; };
+		A4AC9B7685253F3FEAF6269C /* Pods-LRateStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LRateStar.release.xcconfig"; path = "Pods/Target Support Files/Pods-LRateStar/Pods-LRateStar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AA99C2B49D4C79856ADD0AF /* libPods-LRateStar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +54,8 @@
 			children = (
 				35EA793020478CF9007266E1 /* LRateStar */,
 				35EA792F20478CF9007266E1 /* Products */,
+				CD98A006C3C648036417927C /* Pods */,
+				5360FCB0D82AB45949C21656 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +94,23 @@
 			path = LRateStar;
 			sourceTree = "<group>";
 		};
+		5360FCB0D82AB45949C21656 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26068E3ACD88370FB6BBFBA3 /* libPods-LRateStar.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD98A006C3C648036417927C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64D86707AAFEBCD17460399C /* Pods-LRateStar.debug.xcconfig */,
+				A4AC9B7685253F3FEAF6269C /* Pods-LRateStar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35EA794420478CF9007266E1 /* Build configuration list for PBXNativeTarget "LRateStar" */;
 			buildPhases = (
+				4EF7C00066D6EA4378E34546 /* [CP] Check Pods Manifest.lock */,
 				35EA792A20478CF9007266E1 /* Sources */,
 				35EA792B20478CF9007266E1 /* Frameworks */,
 				35EA792C20478CF9007266E1 /* Resources */,
+				9BE827912AA91B834957C2E9 /* [CP] Embed Pods Frameworks */,
+				643433A6211D067E79716271 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,6 +180,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EF7C00066D6EA4378E34546 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LRateStar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		643433A6211D067E79716271 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LRateStar/Pods-LRateStar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BE827912AA91B834957C2E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LRateStar/Pods-LRateStar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		35EA792A20478CF9007266E1 /* Sources */ = {
@@ -294,6 +372,7 @@
 		};
 		35EA794520478CF9007266E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64D86707AAFEBCD17460399C /* Pods-LRateStar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,6 +386,7 @@
 		};
 		35EA794620478CF9007266E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4AC9B7685253F3FEAF6269C /* Pods-LRateStar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
